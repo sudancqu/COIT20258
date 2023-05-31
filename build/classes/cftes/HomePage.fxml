@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cftes.HomePageController">
+   <children>
+      <Label layoutX="245.0" layoutY="25.0" text="Dashboard">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="499.0" layoutY="24.0" mnemonicParsing="false" onAction="#onLogout" text="Logout" />
+      <Button layoutX="251.0" layoutY="534.0" mnemonicParsing="false" onAction="#onSave" prefHeight="35.0" prefWidth="100.0" text="Save" />
+      <Label layoutX="74.0" layoutY="97.0" text="Software Component" />
+      <TextField fx:id="softwareComponentTxtField" layoutX="74.0" layoutY="125.0" prefHeight="44.0" prefWidth="453.0" promptText="Software Component" />
+      <Label layoutX="74.0" layoutY="200.0" text="Energy (kWh)" />
+      <TextField fx:id="energyTxtField" layoutX="74.0" layoutY="228.0" prefHeight="44.0" prefWidth="453.0" promptText="Energy" />
+      <Label layoutX="74.0" layoutY="299.0" text="Emission factor (gCo2/kwh)" />
+      <TextField fx:id="emissionFactorTxtField" layoutX="74.0" layoutY="327.0" prefHeight="44.0" prefWidth="453.0" promptText="Emission factor " />
+      <Label layoutX="74.0" layoutY="410.0" text="Embodied Emission (gCo2))" />
+      <TextField fx:id="embodiedEmissionTxtField" layoutX="74.0" layoutY="438.0" prefHeight="44.0" prefWidth="453.0" promptText="Embodied Emission" />
+      <Button layoutX="62.0" layoutY="20.0" mnemonicParsing="false" onAction="#onView" prefHeight="35.0" prefWidth="100.0" text="View" />
+   </children>
+</AnchorPane>
