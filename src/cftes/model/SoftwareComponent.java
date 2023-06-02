@@ -80,7 +80,7 @@ public class SoftwareComponent {
 
     @Override
     public String toString() {
-        return "id: " + id + "\nName: " + component + "\nEnergy: " + energy + "\nEmission Factor: " + "\nEmbodied Emissions: " + embodiedEmissions + "\nScore: " + score + "\n\n"; 
+        return "id: " + id + "\nName: " + component + "\nEnergy: " + energy + "\nEmission Factor: " + emissionFactor + "\nEmbodied Emissions: " + embodiedEmissions + "\nScore: " + score + "\n\n"; 
     }
 
     

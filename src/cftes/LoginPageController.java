@@ -59,7 +59,6 @@ public class LoginPageController implements Initializable, LoginPresenter.LoginM
         
         try {
             db.createTables();
-            db.insertValues();
         } catch (SQLException ex) {
             Logger.getLogger(LoginPageController.class.getName()).log(Level.SEVERE, null, ex);
         }
