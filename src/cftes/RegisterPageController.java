@@ -11,6 +11,7 @@ import cftes.utils.AlertHelper.AlertHelperInterface;
 import cftes.utils.Page;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -75,4 +76,6 @@ public class RegisterPageController implements Initializable, RegisterModel.Regi
     public void onRegisterError(Exception error) {
         AlertHelper.showError("Error", error.getLocalizedMessage());
     }
+    
+    
 }

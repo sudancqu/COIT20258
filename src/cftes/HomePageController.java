@@ -69,59 +69,17 @@ public class HomePageController implements Initializable, ComponentPresenter.Com
     
     @FXML
     private void onSave(ActionEvent event) {
-        
-        String component = softwareComponentTxtField.getText();
-        double energy = Double.parseDouble(energyTxtField.getText());
-        double eFactor = Double.parseDouble(emissionFactorTxtField.getText());
-        double embodiedEmission = Double.parseDouble(embodiedEmissionTxtField.getText());
-        presenter.save(new SoftwareComponent(component, energy, eFactor,embodiedEmission), user.getId());
-        
-        
-        
-//        String eq = equipmentChoice.valueProperty().getValue().toString();
-//        String feat = featureChoice.valueProperty().getValue().toString();
-//        List<SoftwareComponent> equips = equipments.stream().filter(e -> e.getEquipmentName().equals(eq)).collect(Collectors.toList());
-//        List<SoftwareComponent> feats = features.stream().filter(e -> e.getEquipmentName().equals(feat)).collect(Collectors.toList());
-////        model.save(user.getId(), equipmentChoice.getValue().toString(), emissionValue);     
-//        if(equips.size() > 0 && feats.size() > 0) {
-//            double val1 = equips.get(0).getValue();
-//            double val2 = feats.get(0).getValue();
-//            double result = val1 - val1* 0.15 + val2;
-//            model.save(user.getId(), result);
-//        }
+        try {
+            String component = softwareComponentTxtField.getText();
+            double energy = Double.parseDouble(energyTxtField.getText());
+            double eFactor = Double.parseDouble(emissionFactorTxtField.getText());
+            double embodiedEmission = Double.parseDouble(embodiedEmissionTxtField.getText());
+            presenter.save(new SoftwareComponent(component, energy, eFactor,embodiedEmission), user.getId());
+        } catch (NumberFormatException ex) {
+            onError(ex);
+        }
+
     }
-
-//    @Override
-//    public void onSaveSuccess(ActionEvent event, String message) {
-//        AlertHelper.showSuccess("Success", message, new AlertHelperInterface() {
-//            @Override
-//            public void onOkay() {
-//            }  
-//        });
-//    }
-//
-//    @Override
-//    public void onError(Exception error) {
-//        AlertHelper.showError("Error", error.getLocalizedMessage());
-//    }
-
-//    @Override
-//    public void onFetchedEquipment(List<SoftwareComponent> e) {
-//        equipments = e;
-//        for(SoftwareComponent eq: e) {
-//            equipmentChoice.getItems().add(eq);
-//        }
-//        equipmentChoice.valueProperty().set(e.get(0));
-//    }
-//
-//    @Override
-//    public void onFetchedFeature(List<SoftwareComponent> e) {
-//        features = e;
-//        for(SoftwareComponent eq: e) {
-//            featureChoice.getItems().add(eq);
-//        }
-//        featureChoice.valueProperty().set(e.get(0));
-//    }
     
     
     void clear() {
