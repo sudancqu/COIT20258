@@ -4,8 +4,8 @@
  */
 package cftes.test;
 
-import cftes.presenter.LoginPresenter;
-import cftes.model.User;
+import sci.presenter.LoginPresenter;
+import sci.model.User;
 import javafx.event.ActionEvent;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author Sudan
  */
-public class TestClassTest implements LoginPresenter.LoginModelObservable {
+public class TestClassTest implements LoginPresenter.LoginView {
     
     LoginPresenter loginModel;
     

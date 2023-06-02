@@ -4,7 +4,8 @@
  */
 package cftes;
 
-import cftes.model.User;
+import sci.LoginPageController;
+import sci.model.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
